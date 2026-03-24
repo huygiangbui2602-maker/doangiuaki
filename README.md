@@ -17,17 +17,17 @@ Lệnh này dùng để cài đặt môi trường và các thư viện cần th
 ```bash
 docker build -t do-an-ai .
 ```
-3. Huấn luyện mô hình (Train)
+2. Huấn luyện mô hình (Train)
 Chạy lệnh này để AI học từ dữ liệu CSV, tạo ra file não bộ .pkl và sơ đồ nhiệt buoc4_heatmap.png.
 ```bash
 docker run --rm -v "%cd%:/app" do-an-ai python train_model.py
 ```
-4. Kiểm thử kịch bản (Test)
+3. Kiểm thử kịch bản (Test)
 Chạy 10 kịch bản thực tế để đánh giá độ chính xác của AI.
 ```bash
 docker run --rm -v "%cd%:/app" do-an-ai python test.py
 ```
-6. Dự đoán cá nhân (Predict)
+4. Dự đoán cá nhân (Predict)
 Nhập dữ liệu của bạn để AI dự đoán và xuất biểu đồ chuông so sánh buoc5_bieu_do_chuong.png.
 ```bash
 docker run --rm -it -v "%cd%:/app" do-an-ai python predict.py
