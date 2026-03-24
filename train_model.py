@@ -1,8 +1,8 @@
-# ==============================================================================
-# ĐỒ ÁN MÔN HỌC - FILE 1: HUẤN LUYỆN VÀ LƯU MÔ HÌNH
+# =====================================================================================================
+# ĐỒ ÁN MÔN HỌC - FILE: HUẤN LUYỆN VÀ LƯU MÔ HÌNH
+# Mục đích: Làm mô hình học máy vẽ biểu đồ (Tích hợp tự động cài đầu vào từ Google Drive nếu không có)
 # Mô hình: Hồi quy tuyến tính (Có Chuẩn hóa dữ liệu StandardScaler)
-# Cập nhật: Tự động tải dữ liệu từ Google Drive
-# ==============================================================================
+# =====================================================================================================
 
 import pandas as pd
 import numpy as np
@@ -12,15 +12,13 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import make_pipeline
-from sklearn.metrics import r2_score
-import joblib  
-import warnings
-import gc  
-import gdown  # THÊM MỚI: Thư viện tải file từ Drive
-import os     # THÊM MỚI: Thư viện kiểm tra file trong thư mục
+import joblib   # Đóng gói và lưu mô hình AI (file .pkl) xuống ổ cứng để tái sử dụng mà không cần train lại
+import warnings # Ẩn các cảnh báo vặt (không phải lỗi) của thư viện để màn hình Terminal sạch sẽ, chuyên nghiệp
+import gc       # Garbage Collector: Ép dọn rác, xả RAM ngay lập tức để chống treo máy khi xử lý data lớn
+import gdown    # Thư viện tải file từ Drive
+import os       # Thư viện kiểm tra file trong thư mục
 
 # --- CẤU HÌNH TẢI FILE (THÊM MỚI) ---
-# Em hãy thay FILE_ID bằng mã ID thực tế từ link chia sẻ của em
 FILE_ID = '1_5A5yfMU9ywFO5z-OtEOegKPh0SlmkYo' 
 FILE_NAME = 'instagram_usage_lifestyle.csv'
 
@@ -108,8 +106,7 @@ def train(X_train, X_test, y_train, y_test):
     print("[ 4/5 ] Đang huấn luyện AI (StandardScaler + Linear Regression)...")
     model = make_pipeline(StandardScaler(), LinearRegression())
     model.fit(X_train, y_train)
-    y_pred = model.predict(X_test)
-    print(f"        -> Hoàn thành! R-squared Score: {r2_score(y_test, y_pred):.4f}")
+    print(f"        -> Hoàn thành! ")
     return model
 
 def plot_heatmap(df):

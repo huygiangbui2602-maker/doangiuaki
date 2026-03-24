@@ -10,12 +10,11 @@ COPY requirements.txt .
 # 4. Ra lệnh cài những thư viện trong file danh sách
 RUN pip install --no-cache-dir -r requirements.txt
 
-# 5. Copy toàn bộ code (4 file .py) và file dữ liệu (.csv) 
+# 5. Copy toàn bộ code (4 file .py) 
 COPY check_data_error.py .
 COPY train_model.py .
 COPY predict.py .
 COPY test.py .
-COPY instagram_usage_lifestyle.csv .
 
 # 6. Mặc định mở file kiểm tra dữ liệu đầu tiên
 CMD ["python", "check_data_error.py"]
