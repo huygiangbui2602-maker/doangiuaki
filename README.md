@@ -7,7 +7,7 @@ Bước 1: Tải mã nguồn về máy (Clone)
 
 Mở Terminal (CMD/PowerShell) và gõ lệnh:
 ```bash
-git clone https://github.com/huygiangbui2602-maker/doangiaki.git
+git clone https://github.com/huygiangbui2602-maker/doangiuaki.git
 ```
 ```bash
 cd doangiaki
