@@ -8,6 +8,8 @@ Bước 1: Tải mã nguồn về máy (Clone)
 Mở Terminal (CMD/PowerShell) và gõ lệnh:
 ```bash
 git clone [https://github.com/huygiangbui2602-maker/doangiaki.git](https://github.com/huygiangbui2602-maker/doangiaki.git)
+```
+```bash
 cd doangiaki
 ```
 Bước 2: Chạy bằng Docker
