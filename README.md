@@ -10,7 +10,7 @@ Mở Terminal (CMD/PowerShell) và gõ lệnh:
 git clone https://github.com/huygiangbui2602-maker/doangiuaki.git
 ```
 ```bash
-cd doangiaki
+cd doangiuaki
 ```
 Bước 2: Chạy bằng Docker
 Để đảm bảo hệ thống chạy ổn định và không lỗi thư viện, vui lòng sử dụng Docker theo các bước sau:
